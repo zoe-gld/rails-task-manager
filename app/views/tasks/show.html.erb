@@ -1,0 +1,21 @@
+<div class="title">
+  <h1><%= @task.title %></h1>
+  <%= link_to edit_task_path(@task), class: 'btn btn-primary' do %>
+    <i class="fas fa-pencil-alt"></i> Edit task
+  <% end %>
+</div>
+
+<p class="alert alert-primary"><%= @task.details %></p>
+
+<p>
+  <% if @task.completed %>
+    <p><i class="far fa-check-square"></i> This task is completed</p>
+  <% else %>
+    <p><i class="far fa-square"></i> You still have some work to do</p>
+  <% end %>
+</p>
+
+<div class="dropdown-divider"></div>
+
+<i class="fas fa-undo-alt"></i>  <%= link_to('Back to list', tasks_path) %>
+

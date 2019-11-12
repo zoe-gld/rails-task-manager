@@ -1,0 +1,6 @@
+<h1>Edit "<%= @task.title %>"</h1>
+<%= render 'form' %>
+
+<div class="dropdown-divider"></div>
+
+<i class="fas fa-undo-alt"></i>  <%= link_to("Back to task", task_path(@task.id)) %>
